@@ -25,4 +25,9 @@
 
 #include <configs/zynq-common.h>
 
+#ifdef CONFIG_BOOTCOMMAND
+#undef CONFIG_BOOTCOMMAND
+#endif
+#define CONFIG_BOOTCOMMAND "bootm 0x3000000 0x2000000 0x2a00000"
+
 #endif /* __CONFIG_ZYNQ_ZYBO_H */
